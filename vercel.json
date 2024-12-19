@@ -1,8 +1,0 @@
-{
-    "functions": {
-      "api/logRequest.js": {
-        "runtime": "node@22.x"
-      }
-    }
-  }
-  
