@@ -7,7 +7,7 @@
         src="@/assets/raccoon.png"
       />
       <h1>Welcome to Sniffer</h1>
-      <p>This site logs your visit automatically.</p>
+      <p>Stinky winky...</p>
     </header>
   </div>
 </template>
