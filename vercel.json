@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/logRequest.js": {
+        "runtime": "nodejs18.x"
+      }
+    }
+  }
+  
