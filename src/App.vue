@@ -15,10 +15,32 @@
 <script>
 export default {
   mounted() {
-    // Faz uma requisição para a função serverless no Vercel
+
+    // Get the user's location
+    let location = {};
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position);
+        console.log("Latitude: " + position.coords.latitude);
+        console.log("Longitude: " + position.coords.longitude);
+        location = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        };
+      });
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+
+    // Make a POST request for the serverless Vercel "API" passing location
     fetch('/api/logRequest', {
-      method: 'GET',
-    });
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(location),
+    })
   },
 };
 </script>
